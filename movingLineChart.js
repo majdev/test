@@ -48,12 +48,12 @@ d3.csv("data.csv").then(data => {
         .attr("transform", `translate(0,${chartHeight})`)
         .call(xAxis)
         .call(g => g.selectAll("line").attr("stroke", "#555"))
-        .call(g => g.selectAll("text").attr("fill", "#ccc"));
+        .call(g => g.selectAll("text").attr("fill", "#ccc").style("font-size", "16px"));
 
     g.append("g")
         .call(yAxis)
         .call(g => g.selectAll("line").attr("stroke", "#555"))
-        .call(g => g.selectAll("text").attr("fill", "#ccc"));
+        .call(g => g.selectAll("text").attr("fill", "#ccc").style("font-size", "16px"));
 
     // Add horizontal grid lines
     g.selectAll(".y-grid")
